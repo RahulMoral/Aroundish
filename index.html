@@ -13,7 +13,7 @@
 		<title>Aroundish</title>
 	</head>
 	<body>
-		<div class="main-landing-bg" style="background-image: url(images/photocollage.jpg);">
+		<div class="main-landing-bg" style="background-image: url(images/photocollage-big.jpg);">
 			<div class="arnd-wrapper">
 				<div class="arnd-container">
 					<div class="arnd-content">
@@ -36,10 +36,10 @@
 							<span>Follow us for updates</span>
 						</p>
 						<div class="social-list">
-							<a class="social-list-item" href="javascript:void(0);" target="_blank">
+							<a class="social-list-item" href="https://instagram.com" target="_blank">
 								<img alt="Instagram Icon" src="images/instragramIcon.png" />
 							</a>
-							<a class="social-list-item" href="javascript:void(0);" target="_blank">
+							<a class="social-list-item" href="https://facebook.com" target="_blank">
 								<img alt="Facebook Icon" src="images/facebookIcon.png" />
 							</a>
 						</div>
@@ -56,20 +56,17 @@
 					var arndHeaderH = $('.arnd-header').innerHeight();
 					var arndHeaderTH = arndHederOffset + arndHeaderH;
 					var arndContentH = $('.arnd-wrapper').innerHeight();
-					if ($(window).width() > 1023){
-						if (arndWrapper < 605) {
+					if ($(window).width() >= 1024){
+						if (arndWrapper <= 605) {
 							$('.arnd-content-right').css({
 								'height': arndWrapper,
 								'padding-bottom': '40px',
 								'padding-top': '40px'
 							});
-							// $('.arnd-content-left').css({
-							// 	//'transform': 'scale(.78)',
-							// 	//'padding-top': '40px',
-							// });
+						} else {
+							$('.arnd-content-right').removeAttr('style');
 						}
 					}
-					$('.main-landing-badge').height(arndContentH - arndHeaderTH);
 				});
 			});
 		</script>
