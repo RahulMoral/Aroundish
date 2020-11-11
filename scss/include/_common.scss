@@ -16,7 +16,8 @@ body{
     @include font-SFProText-Regular;
     line-height: 1.5;
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     padding: 0;
     position: relative;
     -webkit-font-smoothing: antialiased;

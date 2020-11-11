@@ -12,8 +12,7 @@
     top: 0;
     width: 100%;
     @include media-breakpoint-down(md){
-        overflow-x: hidden;
-        overflow-y: auto;
+        position: static;
     }
     .main-landing-badge{
         background-color: rgba(#df4937, 0.9);
