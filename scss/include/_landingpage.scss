@@ -153,8 +153,15 @@
                     flex-basis: 100%;
                     height: auto;
                     justify-content: center;
-                    max-width: 300px;
+                    max-width: 100%;
                     padding-bottom: 40px;
+                }
+                .image-content{
+                    @include media-breakpoint-down(md){
+                        margin-left: auto;
+                        margin-right: auto;
+                        max-width: 300px;
+                    }
                 }
                 img{
                     display: block;
@@ -165,6 +172,7 @@
                         height: auto;
                         margin-left: auto;
                         margin-right: auto;
+                        max-height: none;
                         max-width: 100%;
                     }
                 }
