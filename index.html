@@ -15,7 +15,6 @@
 	<body>
 		<div class="main-landing-bg" style="background-image: url(images/photocollage.jpg);">
 			<div class="arnd-wrapper">
-				<div class="main-landing-badge"></div>
 				<div class="arnd-container">
 					<div class="arnd-content">
 						<div class="arnd-content-left">
@@ -48,7 +47,7 @@
 				</div>
 			</div>
 		</div>
-		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script src="js/jquery.min.js"></script>
 		<script type="text/javascript">
 			$(function(){
 				$(window).on('load resize', function(){
@@ -57,9 +56,17 @@
 					var arndHeaderH = $('.arnd-header').innerHeight();
 					var arndHeaderTH = arndHederOffset + arndHeaderH;
 					var arndContentH = $('.arnd-wrapper').innerHeight();
-					if ($(window).width() > 1024){
-						if (arndWrapper < 604) {
-							$('.arnd-content-right').height(arndWrapper);
+					if ($(window).width() > 1023){
+						if (arndWrapper < 605) {
+							$('.arnd-content-right').css({
+								'height': arndWrapper,
+								'padding-bottom': '40px',
+								'padding-top': '40px'
+							});
+							// $('.arnd-content-left').css({
+							// 	//'transform': 'scale(.78)',
+							// 	//'padding-top': '40px',
+							// });
 						}
 					}
 					$('.main-landing-badge').height(arndContentH - arndHeaderTH);
